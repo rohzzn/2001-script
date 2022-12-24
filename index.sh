@@ -13,11 +13,11 @@ _() {
 
   cd "${YEAR}" || exit
   git init
-  echo "**${YEAR}** - Hello World!" \
+  echo "Hello World!" \
     >README.md
   git add .
-  GIT_AUTHOR_DATE="${YEAR}-11-12T18:00:00" \
-    GIT_COMMITTER_DATE="${YEAR}-11-12T18:00:00" \
+  GIT_AUTHOR_DATE="${YEAR}-11-12T16:00:00" \
+    GIT_COMMITTER_DATE="${YEAR}-11-12T16:00:00" \
     git commit -m "${YEAR}"
   git remote add origin "https://${ACCESS_TOKEN}@github.com/${USERNAME}/${YEAR}.git"
   git branch -M main
